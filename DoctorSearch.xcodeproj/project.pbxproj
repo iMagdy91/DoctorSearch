@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */; };
-		79A924521FFC2E1400B12E1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924511FFC2E1400B12E1F /* ViewController.swift */; };
 		79A924551FFC2E1400B12E1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A924531FFC2E1400B12E1F /* Main.storyboard */; };
 		79A924571FFC2E1400B12E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A924561FFC2E1400B12E1F /* Assets.xcassets */; };
 		79A9245A1FFC2E1400B12E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A924581FFC2E1400B12E1F /* LaunchScreen.storyboard */; };
 		79A924651FFC2E1500B12E1F /* DoctorSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924641FFC2E1500B12E1F /* DoctorSearchTests.swift */; };
 		79A924701FFC2E1500B12E1F /* DoctorSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9246F1FFC2E1500B12E1F /* DoctorSearchUITests.swift */; };
+		93E1FEC7F4996A48264CBD4C /* Pods_DoctorSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E70542AE1629DC2305626D0 /* Pods_DoctorSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		79A9244C1FFC2E1400B12E1F /* DoctorSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79A924511FFC2E1400B12E1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79A924541FFC2E1400B12E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79A924561FFC2E1400B12E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A924591FFC2E1400B12E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,9 @@
 		79A9246B1FFC2E1500B12E1F /* DoctorSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoctorSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9246F1FFC2E1500B12E1F /* DoctorSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSearchUITests.swift; sourceTree = "<group>"; };
 		79A924711FFC2E1500B12E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E70542AE1629DC2305626D0 /* Pods_DoctorSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77EF2E97756E7621FA02AED /* Pods-DoctorSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch.release.xcconfig"; sourceTree = "<group>"; };
+		E01C33D33CFBD0702BA221EE /* Pods-DoctorSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E1FEC7F4996A48264CBD4C /* Pods_DoctorSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A073C4966D60A543B6EDE84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E01C33D33CFBD0702BA221EE /* Pods-DoctorSearch.debug.xcconfig */,
+				D77EF2E97756E7621FA02AED /* Pods-DoctorSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E1857029BA410F353EA08DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E70542AE1629DC2305626D0 /* Pods_DoctorSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79A924431FFC2E1400B12E1F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,8 @@
 				79A924631FFC2E1500B12E1F /* DoctorSearchTests */,
 				79A9246E1FFC2E1500B12E1F /* DoctorSearchUITests */,
 				79A9244D1FFC2E1400B12E1F /* Products */,
+				2A073C4966D60A543B6EDE84 /* Pods */,
+				4E1857029BA410F353EA08DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +119,8 @@
 		79A9244E1FFC2E1400B12E1F /* DoctorSearch */ = {
 			isa = PBXGroup;
 			children = (
-				79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */,
-				79A924511FFC2E1400B12E1F /* ViewController.swift */,
-				79A924531FFC2E1400B12E1F /* Main.storyboard */,
-				79A924561FFC2E1400B12E1F /* Assets.xcassets */,
-				79A924581FFC2E1400B12E1F /* LaunchScreen.storyboard */,
-				79A9245B1FFC2E1400B12E1F /* Info.plist */,
+				79A9247E1FFC2FA400B12E1F /* View */,
+				79A9247D1FFC2F9100B12E1F /* Supporting Files */,
 			);
 			path = DoctorSearch;
 			sourceTree = "<group>";
@@ -125,6 +143,33 @@
 			path = DoctorSearchUITests;
 			sourceTree = "<group>";
 		};
+		79A9247D1FFC2F9100B12E1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */,
+				79A924561FFC2E1400B12E1F /* Assets.xcassets */,
+				79A924581FFC2E1400B12E1F /* LaunchScreen.storyboard */,
+				79A9245B1FFC2E1400B12E1F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79A9247E1FFC2FA400B12E1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79A9247F1FFC2FBC00B12E1F /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79A9247F1FFC2FBC00B12E1F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				79A924531FFC2E1400B12E1F /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79A924741FFC2E1500B12E1F /* Build configuration list for PBXNativeTarget "DoctorSearch" */;
 			buildPhases = (
+				0DF4648606441937C5BDECB4 /* [CP] Check Pods Manifest.lock */,
 				79A924481FFC2E1400B12E1F /* Sources */,
 				79A924491FFC2E1400B12E1F /* Frameworks */,
 				79A9244A1FFC2E1400B12E1F /* Resources */,
+				A06CEA58C5BB2D6E0CB00AE9 /* [CP] Embed Pods Frameworks */,
+				273B17056AA05C2208B61F69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +302,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DF4648606441937C5BDECB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoctorSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		273B17056AA05C2208B61F69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A06CEA58C5BB2D6E0CB00AE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79A924481FFC2E1400B12E1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A924521FFC2E1400B12E1F /* ViewController.swift in Sources */,
 				79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,11 +531,13 @@
 		};
 		79A924751FFC2E1500B12E1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E01C33D33CFBD0702BA221EE /* Pods-DoctorSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBZ2UQ2323;
 				INFOPLIST_FILE = DoctorSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohamed.DoctorSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +548,13 @@
 		};
 		79A924761FFC2E1500B12E1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D77EF2E97756E7621FA02AED /* Pods-DoctorSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBZ2UQ2323;
 				INFOPLIST_FILE = DoctorSearch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohamed.DoctorSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

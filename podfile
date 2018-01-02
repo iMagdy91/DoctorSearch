@@ -1,0 +1,11 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target "DoctorSearch" do
+    
+pod 'Alamofire'
+pod 'ObjectMapper'
+pod 'MBProgressHUD'
+pod 'Kingfisher'
+
+end
