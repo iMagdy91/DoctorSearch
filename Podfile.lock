@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Kingfisher (4.0.1)
-  - MBProgressHUD (1.0.0)
-  - ObjectMapper (2.2.8)
+  - Alamofire (4.6.0)
+  - Kingfisher (4.6.1)
+  - MBProgressHUD (1.1.0)
+  - ObjectMapper (3.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -11,10 +11,10 @@ DEPENDENCIES:
   - ObjectMapper
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Kingfisher: b771785e9461ed4b8686d40e7145f9e58100cb24
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
 
 PODFILE CHECKSUM: 4f8827c09456c669b31e10129369664a9ba9d146
 
