@@ -20,9 +20,11 @@ class DSMappingManager {
      */
     class func mapDoctorDTOToDoctorViewModel(_ doctorDTO: DSDoctorSearchDTO) -> [DSDoctorViewModel] {
         var doctorsViewModel = [DSDoctorViewModel]()
-        
-        
-        
+        if let doctorsArray = doctorDTO.doctors {
+            doctorsViewModel = doctorsArray.map { (doctor) -> DSDoctorViewModel in
+                return DSDoctorViewModel(doctorID: doctor.id, name: doctor.name, phoneNumber: doctor.phoneNumber, address: doctor.address, photoID: doctor.photoID)
+            }
+        }
         
         return doctorsViewModel
     }
