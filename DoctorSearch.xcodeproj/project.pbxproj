@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791975A71FFD3A77004C72DF /* DSDoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975A61FFD3A77004C72DF /* DSDoctorViewModel.swift */; };
+		791975A91FFD3BC3004C72DF /* DSMappingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975A81FFD3BC3004C72DF /* DSMappingManager.swift */; };
 		79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */; };
 		79A924551FFC2E1400B12E1F /* DSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A924531FFC2E1400B12E1F /* DSMain.storyboard */; };
 		79A924571FFC2E1400B12E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A924561FFC2E1400B12E1F /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		791975A61FFD3A77004C72DF /* DSDoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorViewModel.swift; sourceTree = "<group>"; };
+		791975A81FFD3BC3004C72DF /* DSMappingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSMappingManager.swift; sourceTree = "<group>"; };
 		79A9244C1FFC2E1400B12E1F /* DoctorSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A924541FFC2E1400B12E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DSMain.storyboard; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				79A924841FFCFB4400B12E1F /* DSConstants.swift */,
+				791975A81FFD3BC3004C72DF /* DSMappingManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				79A9248C1FFCFF9E00B12E1F /* DSBaseViewModel.swift */,
+				791975A61FFD3A77004C72DF /* DSDoctorViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -445,6 +451,7 @@
 				79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */,
 				79A924821FFCF91700B12E1F /* DSNetworkManager.swift in Sources */,
 				79A924851FFCFB4400B12E1F /* DSConstants.swift in Sources */,
+				791975A71FFD3A77004C72DF /* DSDoctorViewModel.swift in Sources */,
 				79A924941FFD0A8500B12E1F /* DSBaseMappable.swift in Sources */,
 				79A924961FFD0AB200B12E1F /* DSAuthenticationObject.swift in Sources */,
 				79A9249A1FFD288000B12E1F /* DSDoctorSearchDTO.swift in Sources */,
@@ -452,6 +459,7 @@
 				79A924981FFD123700B12E1F /* DSDoctorSearchStore.swift in Sources */,
 				79A924911FFD003200B12E1F /* DSAuthenticationManager.swift in Sources */,
 				79A9248D1FFCFF9E00B12E1F /* DSBaseViewModel.swift in Sources */,
+				791975A91FFD3BC3004C72DF /* DSMappingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

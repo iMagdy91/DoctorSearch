@@ -23,6 +23,7 @@ class DSDoctorSearchStore: DSBaseStore {
     private var retryCount              : Int = 0
     
     //MARK: - Methods
+    
     /**
      Requests and filters Doctors list near you.
      
@@ -33,6 +34,7 @@ class DSDoctorSearchStore: DSBaseStore {
      - Parameter failure: Error callback.
      
      */
+    
     func getDoctorsListForLocation(latitude: Double,
                                    longitude: Double,
                                    searchText: String?,
@@ -54,6 +56,7 @@ class DSDoctorSearchStore: DSBaseStore {
                 let doctorSearchModel: DSDoctorSearchDTO? = Mapper<DSDoctorSearchDTO>().map(JSONObject: response)
                 if let doctorsModel = doctorSearchModel {
                     //Mapping response to view model
+                    strongSelf.lastKey = doctorsModel.lastKey
                 }
                 else {
                     //Request a refresh token as the token might be expired
