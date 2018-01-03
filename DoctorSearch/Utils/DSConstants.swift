@@ -34,3 +34,17 @@ struct AuthenticationParameters {
     
     static let grantTypeRefreshValue       = "refresh_token"
 }
+
+struct DoctorSearchHeaders {
+    static let acceptHeaderKey             = "Accept"
+    static let authorizationHeaderKey      = "Authorization"
+    
+    static let authorizationHeaderValue    = "bearer "
+    static let acceptHeaderValue           = "application/json"
+}
+
+struct DoctorSearchParameters {
+    static let lastKeyKey                  = "lastKey"
+    static let latitudeKey                 = "lat"
+    static let longitudeKey                = "lng"
+}

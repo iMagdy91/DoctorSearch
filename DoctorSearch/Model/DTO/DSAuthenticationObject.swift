@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-// DTO Class to parse content of Authentication API into.
+// DTO Class to parse content of Authentication API.
 class DSAuthenticationObject: DSBaseMappable {
     
     // MARK: - Properties

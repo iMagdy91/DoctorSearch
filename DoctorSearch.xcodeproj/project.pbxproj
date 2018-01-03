@@ -17,10 +17,11 @@
 		79A924851FFCFB4400B12E1F /* DSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924841FFCFB4400B12E1F /* DSConstants.swift */; };
 		79A924881FFCFF5600B12E1F /* DSBaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924871FFCFF5600B12E1F /* DSBaseStore.swift */; };
 		79A9248D1FFCFF9E00B12E1F /* DSBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9248C1FFCFF9E00B12E1F /* DSBaseViewModel.swift */; };
-		79A924911FFD003200B12E1F /* DSAuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924901FFD003200B12E1F /* DSAuthenticationStore.swift */; };
+		79A924911FFD003200B12E1F /* DSAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924901FFD003200B12E1F /* DSAuthenticationManager.swift */; };
 		79A924941FFD0A8500B12E1F /* DSBaseMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924931FFD0A8500B12E1F /* DSBaseMappable.swift */; };
 		79A924961FFD0AB200B12E1F /* DSAuthenticationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924951FFD0AB200B12E1F /* DSAuthenticationObject.swift */; };
 		79A924981FFD123700B12E1F /* DSDoctorSearchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924971FFD123700B12E1F /* DSDoctorSearchStore.swift */; };
+		79A9249A1FFD288000B12E1F /* DSDoctorSearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A924991FFD288000B12E1F /* DSDoctorSearchDTO.swift */; };
 		93E1FEC7F4996A48264CBD4C /* Pods_DoctorSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E70542AE1629DC2305626D0 /* Pods_DoctorSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,10 +59,11 @@
 		79A924841FFCFB4400B12E1F /* DSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSConstants.swift; sourceTree = "<group>"; };
 		79A924871FFCFF5600B12E1F /* DSBaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBaseStore.swift; sourceTree = "<group>"; };
 		79A9248C1FFCFF9E00B12E1F /* DSBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBaseViewModel.swift; sourceTree = "<group>"; };
-		79A924901FFD003200B12E1F /* DSAuthenticationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAuthenticationStore.swift; sourceTree = "<group>"; };
+		79A924901FFD003200B12E1F /* DSAuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAuthenticationManager.swift; sourceTree = "<group>"; };
 		79A924931FFD0A8500B12E1F /* DSBaseMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBaseMappable.swift; sourceTree = "<group>"; };
 		79A924951FFD0AB200B12E1F /* DSAuthenticationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSAuthenticationObject.swift; sourceTree = "<group>"; };
 		79A924971FFD123700B12E1F /* DSDoctorSearchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorSearchStore.swift; sourceTree = "<group>"; };
+		79A924991FFD288000B12E1F /* DSDoctorSearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorSearchDTO.swift; sourceTree = "<group>"; };
 		8E70542AE1629DC2305626D0 /* Pods_DoctorSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoctorSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D77EF2E97756E7621FA02AED /* Pods-DoctorSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch.release.xcconfig"; sourceTree = "<group>"; };
 		E01C33D33CFBD0702BA221EE /* Pods-DoctorSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoctorSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DoctorSearch/Pods-DoctorSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,7 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				79A924871FFCFF5600B12E1F /* DSBaseStore.swift */,
-				79A924901FFD003200B12E1F /* DSAuthenticationStore.swift */,
+				79A924901FFD003200B12E1F /* DSAuthenticationManager.swift */,
 				79A924971FFD123700B12E1F /* DSDoctorSearchStore.swift */,
 			);
 			path = Store;
@@ -238,6 +240,7 @@
 			children = (
 				79A924931FFD0A8500B12E1F /* DSBaseMappable.swift */,
 				79A924951FFD0AB200B12E1F /* DSAuthenticationObject.swift */,
+				79A924991FFD288000B12E1F /* DSDoctorSearchDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -444,9 +447,10 @@
 				79A924851FFCFB4400B12E1F /* DSConstants.swift in Sources */,
 				79A924941FFD0A8500B12E1F /* DSBaseMappable.swift in Sources */,
 				79A924961FFD0AB200B12E1F /* DSAuthenticationObject.swift in Sources */,
+				79A9249A1FFD288000B12E1F /* DSDoctorSearchDTO.swift in Sources */,
 				79A924881FFCFF5600B12E1F /* DSBaseStore.swift in Sources */,
 				79A924981FFD123700B12E1F /* DSDoctorSearchStore.swift in Sources */,
-				79A924911FFD003200B12E1F /* DSAuthenticationStore.swift in Sources */,
+				79A924911FFD003200B12E1F /* DSAuthenticationManager.swift in Sources */,
 				79A9248D1FFCFF9E00B12E1F /* DSBaseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
