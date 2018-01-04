@@ -35,10 +35,9 @@ class DSNetworkManager {
                                       failure: @escaping NetworkErrorClosure) {
         
         let url = (path != nil) ? baseURL + path! : baseURL
-        Alamofire.request(url, method: requestMethod, parameters: parameters, headers: headers)
+        Alamofire.request(url, method: requestMethod, parameters: parameters, encoding: URLEncoding.default, headers: headers)
             .validate()
             .responseJSON { response in
-                
                 switch response.result {
                     
                 case .success(_):

@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 struct Network {
     //DoctorSearch APIs
-    static let uvitaBaseURL                = "https://uvita.eu"
+    static let uvitaBaseURL                = "https://api.uvita.eu"
     static let authenticationPath          = "/oauth/token"
     static let doctorSearchPath            = "/api/users/me/doctors" //TODO: UserID is "me" for now till implementation of the login service
 }
@@ -52,4 +53,8 @@ struct DoctorSearchParameters {
 
 struct UITableViewCellIdentifier {
     static let doctorCellIdentifier        = "Doctor Cell"
+}
+
+struct UITableViewConstants {
+    static let estimatedRowHeight:CGFloat  = 110.0
 }

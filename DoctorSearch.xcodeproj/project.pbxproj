@@ -12,6 +12,9 @@
 		791975AC1FFD9CFF004C72DF /* DSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975AB1FFD9CFF004C72DF /* DSBaseViewController.swift */; };
 		791975AE1FFD9D25004C72DF /* DSDoctorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975AD1FFD9D25004C72DF /* DSDoctorsViewController.swift */; };
 		791975B11FFD9F28004C72DF /* DSDoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975B01FFD9F28004C72DF /* DSDoctorTableViewCell.swift */; };
+		791975BC1FFE4501004C72DF /* DSDoctorsViewController+CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975BB1FFE4501004C72DF /* DSDoctorsViewController+CoreLocation.swift */; };
+		791975BE1FFE4BB7004C72DF /* DSDoctorsViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975BD1FFE4BB7004C72DF /* DSDoctorsViewController+UITableView.swift */; };
+		791975C01FFE4DD0004C72DF /* DSDoctorsViewController+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975BF1FFE4DD0004C72DF /* DSDoctorsViewController+UISearchBar.swift */; };
 		79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */; };
 		79A924551FFC2E1400B12E1F /* DSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A924531FFC2E1400B12E1F /* DSMain.storyboard */; };
 		79A924571FFC2E1400B12E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A924561FFC2E1400B12E1F /* Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		791975AB1FFD9CFF004C72DF /* DSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBaseViewController.swift; sourceTree = "<group>"; };
 		791975AD1FFD9D25004C72DF /* DSDoctorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorsViewController.swift; sourceTree = "<group>"; };
 		791975B01FFD9F28004C72DF /* DSDoctorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorTableViewCell.swift; sourceTree = "<group>"; };
+		791975BB1FFE4501004C72DF /* DSDoctorsViewController+CoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSDoctorsViewController+CoreLocation.swift"; sourceTree = "<group>"; };
+		791975BD1FFE4BB7004C72DF /* DSDoctorsViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSDoctorsViewController+UITableView.swift"; sourceTree = "<group>"; };
+		791975BF1FFE4DD0004C72DF /* DSDoctorsViewController+UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSDoctorsViewController+UISearchBar.swift"; sourceTree = "<group>"; };
 		79A9244C1FFC2E1400B12E1F /* DoctorSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A924541FFC2E1400B12E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DSMain.storyboard; sourceTree = "<group>"; };
@@ -143,6 +149,9 @@
 		791975BA1FFDA6E2004C72DF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				791975BB1FFE4501004C72DF /* DSDoctorsViewController+CoreLocation.swift */,
+				791975BD1FFE4BB7004C72DF /* DSDoctorsViewController+UITableView.swift */,
+				791975BF1FFE4DD0004C72DF /* DSDoctorsViewController+UISearchBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -483,10 +492,13 @@
 			files = (
 				79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */,
 				79A924821FFCF91700B12E1F /* DSNetworkManager.swift in Sources */,
+				791975BE1FFE4BB7004C72DF /* DSDoctorsViewController+UITableView.swift in Sources */,
 				79A924851FFCFB4400B12E1F /* DSConstants.swift in Sources */,
+				791975C01FFE4DD0004C72DF /* DSDoctorsViewController+UISearchBar.swift in Sources */,
 				791975A71FFD3A77004C72DF /* DSDoctorViewModel.swift in Sources */,
 				79A924941FFD0A8500B12E1F /* DSBaseMappable.swift in Sources */,
 				79A924961FFD0AB200B12E1F /* DSAuthenticationObject.swift in Sources */,
+				791975BC1FFE4501004C72DF /* DSDoctorsViewController+CoreLocation.swift in Sources */,
 				791975AE1FFD9D25004C72DF /* DSDoctorsViewController.swift in Sources */,
 				79A9249A1FFD288000B12E1F /* DSDoctorSearchDTO.swift in Sources */,
 				791975AC1FFD9CFF004C72DF /* DSBaseViewController.swift in Sources */,

@@ -18,10 +18,10 @@ class DSDoctorSearchStore: DSBaseStore {
     
     
     //MARK: - Properties
-    private var accessToken             : DSAuthenticationObject?
-    private var lastKey                 : String?
-    private let authenticationManager   : DSAuthenticationManager = DSAuthenticationManager()
-    private var retryCount              : Int = 0
+    private  var accessToken             : DSAuthenticationObject?
+    internal var lastKey                 : String?
+    private  let authenticationManager   : DSAuthenticationManager = DSAuthenticationManager()
+    private  var retryCount              : Int = 0
     
     //MARK: - Methods
     
