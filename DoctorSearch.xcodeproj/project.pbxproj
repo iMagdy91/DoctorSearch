@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		791975A71FFD3A77004C72DF /* DSDoctorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975A61FFD3A77004C72DF /* DSDoctorViewModel.swift */; };
 		791975A91FFD3BC3004C72DF /* DSMappingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975A81FFD3BC3004C72DF /* DSMappingManager.swift */; };
+		791975AC1FFD9CFF004C72DF /* DSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975AB1FFD9CFF004C72DF /* DSBaseViewController.swift */; };
+		791975AE1FFD9D25004C72DF /* DSDoctorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975AD1FFD9D25004C72DF /* DSDoctorsViewController.swift */; };
+		791975B11FFD9F28004C72DF /* DSDoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791975B01FFD9F28004C72DF /* DSDoctorTableViewCell.swift */; };
 		79A924501FFC2E1400B12E1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */; };
 		79A924551FFC2E1400B12E1F /* DSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A924531FFC2E1400B12E1F /* DSMain.storyboard */; };
 		79A924571FFC2E1400B12E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A924561FFC2E1400B12E1F /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		791975A61FFD3A77004C72DF /* DSDoctorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorViewModel.swift; sourceTree = "<group>"; };
 		791975A81FFD3BC3004C72DF /* DSMappingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSMappingManager.swift; sourceTree = "<group>"; };
+		791975AB1FFD9CFF004C72DF /* DSBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBaseViewController.swift; sourceTree = "<group>"; };
+		791975AD1FFD9D25004C72DF /* DSDoctorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorsViewController.swift; sourceTree = "<group>"; };
+		791975B01FFD9F28004C72DF /* DSDoctorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDoctorTableViewCell.swift; sourceTree = "<group>"; };
 		79A9244C1FFC2E1400B12E1F /* DoctorSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoctorSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A9244F1FFC2E1400B12E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79A924541FFC2E1400B12E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DSMain.storyboard; sourceTree = "<group>"; };
@@ -116,6 +122,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		791975AA1FFD9CE9004C72DF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				791975BA1FFDA6E2004C72DF /* Extension */,
+				791975AB1FFD9CFF004C72DF /* DSBaseViewController.swift */,
+				791975AD1FFD9D25004C72DF /* DSDoctorsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		791975AF1FFD9EE4004C72DF /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				791975B01FFD9F28004C72DF /* DSDoctorTableViewCell.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		791975BA1FFDA6E2004C72DF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		79A924431FFC2E1400B12E1F = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +172,7 @@
 		79A9244E1FFC2E1400B12E1F /* DoctorSearch */ = {
 			isa = PBXGroup;
 			children = (
+				791975AA1FFD9CE9004C72DF /* Controller */,
 				79A9248A1FFCFF8700B12E1F /* Model */,
 				79A924861FFCFF3500B12E1F /* Store */,
 				79A924831FFCFB3800B12E1F /* Utils */,
@@ -183,6 +215,7 @@
 		79A9247E1FFC2FA400B12E1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				791975AF1FFD9EE4004C72DF /* Custom View */,
 				79A9247F1FFC2FBC00B12E1F /* Storyboard */,
 			);
 			path = View;
@@ -454,11 +487,14 @@
 				791975A71FFD3A77004C72DF /* DSDoctorViewModel.swift in Sources */,
 				79A924941FFD0A8500B12E1F /* DSBaseMappable.swift in Sources */,
 				79A924961FFD0AB200B12E1F /* DSAuthenticationObject.swift in Sources */,
+				791975AE1FFD9D25004C72DF /* DSDoctorsViewController.swift in Sources */,
 				79A9249A1FFD288000B12E1F /* DSDoctorSearchDTO.swift in Sources */,
+				791975AC1FFD9CFF004C72DF /* DSBaseViewController.swift in Sources */,
 				79A924881FFCFF5600B12E1F /* DSBaseStore.swift in Sources */,
 				79A924981FFD123700B12E1F /* DSDoctorSearchStore.swift in Sources */,
 				79A924911FFD003200B12E1F /* DSAuthenticationManager.swift in Sources */,
 				79A9248D1FFCFF9E00B12E1F /* DSBaseViewModel.swift in Sources */,
+				791975B11FFD9F28004C72DF /* DSDoctorTableViewCell.swift in Sources */,
 				791975A91FFD3BC3004C72DF /* DSMappingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

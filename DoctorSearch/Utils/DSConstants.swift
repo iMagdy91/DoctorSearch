@@ -12,7 +12,7 @@ struct Network {
     //DoctorSearch APIs
     static let uvitaBaseURL                = "https://uvita.eu"
     static let authenticationPath          = "/oauth/token"
-    static let doctorSearchPath            = "/api/users/me/doctors" //UserID is "me" for now till implementation of the login service
+    static let doctorSearchPath            = "/api/users/me/doctors" //TODO: UserID is "me" for now till implementation of the login service
 }
 
 struct AuthenticationHeaders {
@@ -20,7 +20,7 @@ struct AuthenticationHeaders {
     static let contentTypeHeaderKey        = "Content-Type"
     static let acceptHeaderKey             = "Accept"
     
-    static let authorizationHeaderValue    = "Basic aXBob25lOmlwaG9uZXdpbGxub3RiZXRoZXJlYW55bW9yZQ==" //Static for now as the current credintials encoding is unauthorized
+    static let authorizationHeaderValue    = "Basic aXBob25lOmlwaG9uZXdpbGxub3RiZXRoZXJlYW55bW9yZQ==" //TODO: Static for now as the current credintials encoding is unauthorized
     static let contentTypeHeaderValue      = "application/x-www-form-urlencoded"
     static let acceptHeaderValue           = "application/json"
 }
@@ -47,4 +47,9 @@ struct DoctorSearchParameters {
     static let lastKeyKey                  = "lastKey"
     static let latitudeKey                 = "lat"
     static let longitudeKey                = "lng"
+    static let searchKey                   = "search"
+}
+
+struct UITableViewCellIdentifier {
+    static let doctorCellIdentifier        = "Doctor Cell"
 }

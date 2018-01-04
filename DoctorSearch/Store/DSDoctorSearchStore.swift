@@ -9,10 +9,11 @@
 import Foundation
 import ObjectMapper
 
-// Static only for this challenge!
+//TODO: Static only for this challenge!
 fileprivate let username                : String = "ioschallenge@uvita.eu"
 fileprivate let password                : String = "shouldnotbetoohard"
 fileprivate let tokenRetryLimit         : Int    = 10
+
 class DSDoctorSearchStore: DSBaseStore {
     
     
@@ -50,6 +51,9 @@ class DSDoctorSearchStore: DSBaseStore {
             if let lastKeyString = lastKey {
                 parametersDictionary[DoctorSearchParameters.lastKeyKey] = lastKeyString
             }
+            if let searchString = searchText {
+                parametersDictionary[DoctorSearchParameters.searchKey] = searchString
+            }
             
             DSNetworkManager.performRequestWithPath(path: Network.doctorSearchPath, requestMethod: .get, parameters: parametersDictionary, headers: headersDictionary, success: { [weak self](response) in
                 guard let strongSelf = self else { return }
@@ -57,6 +61,9 @@ class DSDoctorSearchStore: DSBaseStore {
                 if let doctorsModel = doctorSearchModel {
                     //Mapping response to view model
                     strongSelf.lastKey = doctorsModel.lastKey
+                    strongSelf.retryCount = 0 //Reseting the retry count after a successful response
+                    let doctorsViewModel: [DSDoctorViewModel] = DSMappingManager.mapDoctorDTOToDoctorViewModel(doctorsModel)
+                    success(doctorsViewModel)
                 }
                 else {
                     //Request a refresh token as the token might be expired
