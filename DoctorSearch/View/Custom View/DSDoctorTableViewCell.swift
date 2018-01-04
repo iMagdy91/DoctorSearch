@@ -10,7 +10,6 @@ import UIKit
 import Kingfisher
 
 typealias ImageDownloadCompletion = () -> Void
-typealias ImageDownloadRequest    = (String) -> ()
 
 class DSDoctorTableViewCell: UITableViewCell {
     
@@ -25,8 +24,7 @@ class DSDoctorTableViewCell: UITableViewCell {
     // MARK: - Cell Customization
     func customizeCellWithModel(_ doctor: DSDoctorViewModel?,
                                 doctorStore: DSDoctorSearchStore,
-                                indexPath: IndexPath,
-                                completion: @escaping ImageDownloadCompletion) {
+                                indexPath: IndexPath) {
         doctorNameLabel.text = doctor?.name
         doctorAddressLabel.text = doctor?.address
         tag = indexPath.row
@@ -48,12 +46,7 @@ class DSDoctorTableViewCell: UITableViewCell {
                         }
                     }
                 })
-                
             }
         }
-        
-        
-        
-        
     }
 }

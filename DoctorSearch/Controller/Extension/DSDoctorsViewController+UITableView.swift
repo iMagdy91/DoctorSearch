@@ -48,10 +48,7 @@ extension DSDoctorsViewController: UITableViewDataSource, UITableViewDelegate {
         
         let doctorModel = doctorViewModelArray?[indexPath.row]
         
-        cell?.customizeCellWithModel(doctorModel, doctorStore: doctorStore, indexPath: indexPath, completion: {
-            tableView.beginUpdates()
-            tableView.endUpdates()
-        })
+        cell?.customizeCellWithModel(doctorModel, doctorStore: doctorStore, indexPath: indexPath)
 
         return cell!
     }
