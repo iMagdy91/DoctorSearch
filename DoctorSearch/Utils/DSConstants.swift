@@ -14,6 +14,7 @@ struct Network {
     static let uvitaBaseURL                = "https://api.uvita.eu"
     static let authenticationPath          = "/oauth/token"
     static let doctorSearchPath            = "/api/users/me/doctors" //TODO: UserID is "me" for now till implementation of the login service
+    static let photoAPIPath                = "/api/users/me/files/"
 }
 
 struct AuthenticationHeaders {
@@ -42,6 +43,7 @@ struct DoctorSearchHeaders {
     
     static let authorizationHeaderValue    = "bearer "
     static let acceptHeaderValue           = "application/json"
+    static let acceptImageValue            = "image/jpeg"
 }
 
 struct DoctorSearchParameters {

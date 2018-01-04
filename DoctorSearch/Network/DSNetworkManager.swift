@@ -47,5 +47,21 @@ class DSNetworkManager {
                 }
         }
     }
+    
+    class func performDataRequestWithPath(baseURL: String = Network.uvitaBaseURL,
+                                          path: String?,
+                                          requestMethod: Alamofire.HTTPMethod,
+                                          parameters: [String : Any]?,
+                                          headers: [String : String]?,
+                                          success: @escaping NetworkSuccessClosure,
+                                          failure: @escaping NetworkErrorClosure) {
+        
+        let url = (path != nil) ? baseURL + path! : baseURL
+        Alamofire.request(url, method: requestMethod, parameters: parameters, encoding: URLEncoding.default, headers: headers)
+            .validate()
+            .responseData { (data) in
+                success(data.data)
+        }
+    }
 }
 

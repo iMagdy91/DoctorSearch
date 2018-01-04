@@ -12,4 +12,6 @@ protocol DSBaseStore {
     typealias ErrorClosure      = (Error) -> Void
     typealias ViewModelClosure  = ([DSBaseViewModel]?) -> Void
     typealias BaseDTOClosure    = (DSBaseMappable?) -> Void
+    typealias PhotoClosure      = (Data) -> Void
+
 }

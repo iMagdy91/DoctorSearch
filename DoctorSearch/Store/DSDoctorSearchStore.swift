@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import Alamofire
 
 //TODO: Static only for this challenge!
 fileprivate let username                : String = "ioschallenge@uvita.eu"
@@ -88,6 +89,30 @@ class DSDoctorSearchStore: DSBaseStore {
                     strongSelf.getDoctorsListForLocation(latitude: latitude, longitude: longitude, searchText: searchText, success: success, failure: failure)
                 }
             }, failure: failure)
+        }
+    }
+    /**
+     Get Doctor's Photo with ID.
+     
+     - Parameter photoID: The Photo ID.
+     - Parameter dataClosure: Callback with the photo data.
+     
+     */
+    func getPhotoWithID(_ photoID: String, andPhotoDataClosure dataClosure: @escaping PhotoClosure ) {
+        if let token = accessToken?.accessToken {
+            let headersDictionary = [DoctorSearchHeaders.acceptHeaderKey : DoctorSearchHeaders.acceptImageValue,
+                                     DoctorSearchHeaders.authorizationHeaderKey : DoctorSearchHeaders.authorizationHeaderValue + token]
+            
+            let path = Network.photoAPIPath + photoID
+            
+            DSNetworkManager.performDataRequestWithPath(path: path, requestMethod: .get, parameters: nil, headers: headersDictionary, success: { (response) in
+                if let data = response as? Data {
+                    dataClosure(data)
+                }
+            }, failure: { (error) in
+                return
+            })
+            
         }
     }
     

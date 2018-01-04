@@ -10,27 +10,50 @@ import UIKit
 import Kingfisher
 
 typealias ImageDownloadCompletion = () -> Void
+typealias ImageDownloadRequest    = (String) -> ()
 
 class DSDoctorTableViewCell: UITableViewCell {
-
+    
+    //MARK: - Properties
+    var cache                               :NSCache<AnyObject, AnyObject> = NSCache()
+    
     //MARK: - Outlets
-    @IBOutlet weak var doctorImageView: UIImageView!
-    @IBOutlet weak var doctorNameLabel: UILabel!
-    @IBOutlet weak var doctorAddressLabel: UILabel!
+    @IBOutlet weak var doctorImageView      : UIImageView!
+    @IBOutlet weak var doctorNameLabel      : UILabel!
+    @IBOutlet weak var doctorAddressLabel   : UILabel!
     
     // MARK: - Cell Customization
-    func customizeCellWithModel(doctor: DSDoctorViewModel?, completion: @escaping ImageDownloadCompletion) {
+    func customizeCellWithModel(_ doctor: DSDoctorViewModel?,
+                                doctorStore: DSDoctorSearchStore,
+                                indexPath: IndexPath,
+                                completion: @escaping ImageDownloadCompletion) {
         doctorNameLabel.text = doctor?.name
         doctorAddressLabel.text = doctor?.address
-        
-        if let urlString = doctor?.photoID {
-            let url = URL(string: urlString)
-            doctorImageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "Placeholder"), options: nil, progressBlock: nil, completionHandler: {[weak self] (image, error, cacheType, url) in
-                self?.doctorImageView.sizeToFit()
-                if cacheType == .none || cacheType == .disk {
-                    completion()
-                }
-            })
+        tag = indexPath.row
+        doctorImageView.image = #imageLiteral(resourceName: "Placeholder")
+        if let photoID = doctor?.photoID {
+            if (cache.object(forKey: photoID as AnyObject) != nil){
+                doctorImageView.image = self.cache.object(forKey: photoID as AnyObject) as? UIImage
+            }
+            else {
+                doctorStore.getPhotoWithID(photoID, andPhotoDataClosure: {[weak self] (data) in
+                    guard let strongSelf = self else { return }
+                    let image = UIImage(data: data)
+                    if let img = image {
+                        DispatchQueue.main.async {
+                            if strongSelf.tag == indexPath.row {
+                                strongSelf.cache.setObject(img, forKey: photoID as AnyObject)
+                                strongSelf.doctorImageView.image = img
+                            }
+                        }
+                    }
+                })
+                
+            }
         }
+        
+        
+        
+        
     }
 }

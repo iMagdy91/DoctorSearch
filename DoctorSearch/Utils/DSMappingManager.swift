@@ -15,7 +15,7 @@ class DSMappingManager {
      Map DSDoctorSearchDTO to DSDoctorViewModel for the UI usage.
      
      - Parameter doctorDTO: DSDoctorSearchDTO to be mapped.
-     - Returns : mapped DSDoctorViewModel array.
+     - Returns : Mapped DSDoctorViewModel array.
      .
      */
     class func mapDoctorDTOToDoctorViewModel(_ doctorDTO: DSDoctorSearchDTO) -> [DSDoctorViewModel] {
