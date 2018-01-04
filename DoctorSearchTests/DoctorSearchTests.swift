@@ -26,11 +26,38 @@ class DoctorSearchTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    
+    
+    func testAPIResponse() {
+        
+        let expectations: XCTestExpectation = expectation(description: "Testing Doctors API")
+        let doctorStore  : DSDoctorSearchStore      = DSDoctorSearchStore()
+        doctorStore.getDoctorsListForLocation(latitude: 50, longitude: 12, searchText: nil, success: { (model) in
+            let doctors: [DSDoctorViewModel]? = model as? [DSDoctorViewModel]
+            XCTAssertNotNil(doctors)
+            XCTAssert(doctors?.count == 20)
+            XCTAssertNotNil(doctors?.first?.name)
+            expectations.fulfill()
+
+        }) { (error) in
+            XCTFail("##ERROR happened: \(error)")
+            expectations.fulfill()
+
+        }
+        waitForExpectations(timeout: 10.0) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsTimeout error: \(error)")
+            }
+        }
+        
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        self.measure {[weak self] in
+            self?.testAPIResponse()
         }
     }
+
     
 }

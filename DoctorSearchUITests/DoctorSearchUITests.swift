@@ -28,9 +28,23 @@ class DoctorSearchUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    
+    func testUI() {
+        let app = XCUIApplication()
+        let table = app.tables.element(boundBy: 0)
+        let thirdCell = table.cells.element(boundBy: 2)
+        table.scrollToElement(element: thirdCell)
+        XCTAssertFalse(table.cells.count == 0)
+    }
+    
+}
+
+extension XCUIElement {
+    func scrollToElement(element: XCUIElement) {
+        for _ in 0..<3 {
+            swipeUp()
+        }
     }
     
 }
